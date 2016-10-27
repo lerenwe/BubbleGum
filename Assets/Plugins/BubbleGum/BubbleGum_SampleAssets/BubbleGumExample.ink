@@ -1,0 +1,3 @@
+-Character1: And that's how you pop up some speech bubbles!
+-Character2: Now go have some fun, you people.
+- ->END
