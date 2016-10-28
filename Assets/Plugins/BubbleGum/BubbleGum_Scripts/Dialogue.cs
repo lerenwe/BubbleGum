@@ -210,11 +210,11 @@ public class Dialogue : MonoBehaviour {
                         image.enabled = false;
                     }
 
-                    GameObject[] AllWords = GameObject.FindGameObjectsWithTag("DialogueWord");
+                    WordNextToFirst[] AllWords = GameObject.FindObjectsOfType<WordNextToFirst>();
 
-                    foreach (GameObject word in AllWords)
+                    foreach (WordNextToFirst word in AllWords)
                     {
-                        Destroy(word);
+                        Destroy(word.gameObject);
                     }
 
                     dialogueDisplayer.ResetDialogueBubble();

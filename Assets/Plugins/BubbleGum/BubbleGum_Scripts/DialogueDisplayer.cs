@@ -122,10 +122,10 @@ public class DialogueDisplayer : MonoBehaviour {
     //This will also immediately start to display the next line of dialogue.
     public void ResetDialogueBubble ()
     {
-        GameObject[] everySingleWord = GameObject.FindGameObjectsWithTag("DialogueWord");
+        WordNextToFirst[] everySingleWord = GameObject.FindObjectsOfType<WordNextToFirst>();
 
-        foreach (GameObject word in everySingleWord)
-            GameObject.Destroy(word);
+        foreach (WordNextToFirst word in everySingleWord)
+            GameObject.Destroy(word.gameObject);
 
         firstWordMustSpawn = true;
         DisplayNewText(textToDisplay);
